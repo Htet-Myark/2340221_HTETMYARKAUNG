@@ -1,0 +1,66 @@
+<!-- // Name : HTET MYARK AUNG
+// Class: DIT/1B/04
+// Admin No: 2340221 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../client/styles/style.css">
+    <link rel="stylesheet" href="../client/styles/scroll.css">
+    <title>CA 2</title>
+</head>
+
+<body>
+
+
+    <div>
+        <div id="topTenDegreesSection">
+            <div class="headers">
+                <h2>University Information -
+                Top 10 Degrees having highest "Basic Monthly Salary - Median (S$)</h2>
+            </div>
+
+            <label for="yearInput">Enter Year:</label>
+            <input type="text" id="yearInput" placeholder="e.g., 2023">
+            <button onclick="getTopDegrees()">Submit</button>
+            <div class="scrollable-container">
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="fullTimeEmploymentSection">
+            <div class="headers">
+            <h2 >University Information - Full-Time Permanent Employment Rate </h2>
+            </div>
+            <label for="universityDropdown">Select University:</label>
+            <select id="universityDropdown"></select>
+            <div>
+            <label for="employmentYearInput">Enter Year:</label>
+            <input type="text" id="employmentYearInput" placeholder="e.g., 2023">
+            <button onclick="getFullTimeEmployment()">Submit</button>
+        </div>
+            <div class="scrollable-container">
+                <!-- to add data dynamically -->
+                <div id="result1"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../client/scripts/main.js"></script>
+    <script src="../client/scripts/dropdown.js"></script>
+    <script src="../client/scripts/card.js"></script>
+    <script src="../client/scripts/sort.js"></script>
+
+
+
+
+
+</body>
+
+</html>
