@@ -19,7 +19,7 @@ async function getTopDegrees() {
             return;
         }
 
-        const response = await fetch(`http://localhost:8081/year/${yearInput}`);
+        const response = await fetch(`/year/${yearInput}`);
         const data = await response.json();
 
         // Sort the data by basic monthly median in descending order
@@ -67,7 +67,7 @@ async function getFullTimeEmployment() {
             return;
         }
 
-        const response = await fetch(`http://localhost:8081/university/${selectedUniversityCode}/year/${employmentYearInput}`);
+        const response = await fetch(`/university/${selectedUniversityCode}/year/${employmentYearInput}`);
         const data = await response.json();
 
         // Display the cards only if there is data

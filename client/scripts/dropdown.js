@@ -7,7 +7,7 @@
 async function populateUniversityDropdown() {
     const universityDropdown = document.getElementById('universityDropdown');
     try {
-        const response = await fetch('http://localhost:8081/university');
+        const response = await fetch('/university');
         const universities = await response.json();
 
         universities.forEach((uni) => {
