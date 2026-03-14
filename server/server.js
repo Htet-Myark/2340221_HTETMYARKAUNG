@@ -16,8 +16,9 @@ const parse   = require("csv-parse").parse;
 
 const cors = require('cors');
 app.use(cors());
-// Try this path:
-app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
+// Add after app.use(cors())
+app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use('/client', express.static(path.join(__dirname, '..', 'client')));
 
 const uniCodeMap = new Map ([
    ["NTU", "Nanyang Technological University"]
