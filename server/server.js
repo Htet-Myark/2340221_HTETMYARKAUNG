@@ -54,7 +54,7 @@ function getUniCode(university) {
 function readAllData() {
    return new Promise((resolve, reject) => {
       const rData = [];
-      fs.createReadStream(".\\data\\GraduateEmploymentSurvey.csv")
+      fs.createReadStream(path.join(__dirname, "data", "GraduateEmploymentSurvey.csv"))
          .pipe(parse({ delimiter: ',', from_line: 2 }))
          .on('data', function (csvrow) {
             csvrow[2] = csvrow[1] == "Singapore University of Technology and Design" ? "SUTD" : csvrow[2];
@@ -144,7 +144,7 @@ app.get('/university/:uniCode/year/:year', (req, res) => {
 // prepare data then start server
 readAllData().then((alldata) => {
    data2023 = alldata;
-   const server = app.listen(8081, 'localhost', () => {
+   const server = app.listen(process.env.PORT || 8081, () => {
       const host = server.address().address
       const port = server.address().port
       console.log(`Example app listening at http://${host}:${port}`);
