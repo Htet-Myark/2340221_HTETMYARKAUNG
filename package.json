@@ -1,11 +1,9 @@
 {
-
-  
-    "dependencies": {
-      "cors": "^2.8.5",
-      "csv-parse": "^5.5.0",
-      "express": "^4.18.2",
-      "fs": "^0.0.1-security"
-    }
+  "start": "node server/server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.0",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security"
   }
-  
+}
