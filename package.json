@@ -1,5 +1,7 @@
 {
-  "start": "node server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "csv-parse": "^5.5.0",
