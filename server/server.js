@@ -29,6 +29,7 @@ const uniCodeMap = new Map ([
 let data2023;
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
 
 // display basic information from request 
 app.use((req, res, next) => {
@@ -88,10 +89,10 @@ function readAllData() {
 
 // API ENDPOINTS
 // This responds with " Nothing" on the homepage
-app.get('/', function (req, res) {
-   console.log("Host data ready");
-   res.send('Your Data Host!');
-})
+// app.get('/', function (req, res) {
+//    console.log("Host data ready");
+//    res.send('Your Data Host!');
+// })
 
 // all records e.g. http://localhost:8081/all
 app.get('/all', (req, res) => {   
