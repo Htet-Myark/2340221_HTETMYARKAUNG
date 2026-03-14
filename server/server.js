@@ -16,6 +16,8 @@ const parse   = require("csv-parse").parse;
 
 const cors = require('cors');
 app.use(cors());
+// Try this path:
+app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
 
 const uniCodeMap = new Map ([
    ["NTU", "Nanyang Technological University"]
@@ -29,7 +31,7 @@ const uniCodeMap = new Map ([
 let data2023;
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
+
 
 // display basic information from request 
 app.use((req, res, next) => {
